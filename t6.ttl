@@ -15,10 +15,10 @@
 @prefix : <http://idea.tw.rpi.edu/projects/heals/hao/kb/> .
 
 :model-lbxbpb-lbxtc-cartridge rdf:type hao:ModelCartridge;
-      sio:hasPart [rdf:type    hao:Note ;
+      sio:hasPart [rdf:type hao:Note ;
         rdfs:label "Note"^^xsd:string ;
-        sio:hasValue "The numbers here are just placeholders"^^xsd:string];
+        sio:hasValue "The numbers here are just placeholders"^^xsd:string;
 
-       rdf:type    hao:RiskFactorCartridge ;
+       rdf:type  hao:RiskFactorCartridge;
         rdfs:label "Risk Factor Cartridge Json File"^^xsd:string ;
-        sio:hasValue "riskfactors-clm.json"^^xsd:string.
+        sio:hasValue "riskfactors-clm.json"^^xsd:string].
