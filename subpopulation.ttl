@@ -1,0 +1,121 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix hao: <http://idea.tw.rpi.edu/projects/heals/hao/> .
+@prefix sco: <http://idea.tw.rpi.edu/projects/heals/sco/> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix stato: <http://purl.obolibrary.org/obo/STATO_> .
+@prefix obcs: <http://purl.obolibrary.org/obo/OBCS_> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix chear: <http://hadatac.org/ont/chear#> .
+@prefix : <http://idea.tw.rpi.edu/projects/heals/hao/kb/> .
+
+:subpopulation-lbxbpb-cartridge rdf:type hao:SubpoplationCartridge;
+     sio:hasPart [rdf:type  hao:RiskFactorCartridge;
+        rdfs:label "Risk Factor Cartridge Json File"^^xsd:string ;
+        sio:hasValue "riskfactors-clm.json"^^xsd:string];
+        
+        sio:hasPart [rdf:type  hao:ResponseCartridge ;
+        rdfs:label "Response Cartridge Json File"^^xsd:string ;
+        sio:hasValue "response-totalcholesterol.json"^^xsd:string ];
+        
+        sio:hasPart [
+        rdf:type    hao:CohortCartridge ;
+        rdfs:label "Cohort Cartridge Json File"^^xsd:string ;
+        sio:hasValue "cohort-population.json"^^xsd:string ];
+
+
+       sio:hasPart [rdf:type    hao:ParameterCartridge ;
+        rdfs:label "Parameter Cartridge Json File"^^xsd:string ;
+        sio:hasValue "parameters-cadre.json"^^xsd:string ];
+
+
+      sio:hasPart [
+        rdf:type    hao:ModelCartridge ;
+        rdfs:label "Model Cartridge Json File"^^xsd:string ;
+        sio:hasValue "model-lbxbpb-lbxtc.json"^^xsd:string ];
+
+
+    sio:hasPart [
+        rdf:type    hao:ResultCartridge ;
+        rdfs:label "Result Cartridge Json File"^^xsd:string ;
+        sio:hasValue "results-subpopulation-lbxbpb.json"^^xsd:string ];
+
+
+    sio:hasPart [
+        rdf:type    hao:SubpopulationCartridge ;
+        rdfs:label "Subpopulation Cartridge Json File"^^xsd:string ;
+        sio:hasValue "subpopulation-lbxbpb.json"^^xsd:string ];
+
+
+   sio:hasPart [
+        rdf:type    hao:IncludedRiskFactor ;
+        rdfs:label "Included Risk Factor"^^xsd:string ;
+        sio:hasValue "LBXBPB"^^xsd:string ];
+        
+        
+        
+        
+   sio:hasPart [
+       rdf:type    hao:CadreCount;
+        rdfs:label "Cadre Count"^^xsd:string ;
+        sio:hasValue "2"^^xsd:integer  ];
+
+        
+
+   sio:hasPart [
+        rdf:type    hao:CadreSizeList ;
+        rdfs:label "Cadre Size List"^^xsd:string;
+     sio:hasPart [
+            rdf:type    hao:Cadre ;
+        rdfs:label "Cardre 0"^^xsd:string ;
+        sio:hasAttribute [
+        rdf:type    hao:CadreIndex ;
+        rdfs:label "Cadre Index"^^xsd:string ;
+        sio:hasValue    "0"^^xsd:integer 
+            ];
+            sio:hasAttribute [
+           rdf:type    stato:0000088 ;
+        rdfs:label "Number of Positive Observations"^^xsd:string ;
+        sio:hasValue    "7303"^^xsd:integer
+            ];
+            ];
+        sio:hasPart [
+            rdf:type    hao:Cadre ;
+        rdfs:label "Cardre 1"^^xsd:string ;
+        sio:hasAttribute [
+                  rdf:type    hao:CadreIndex ;
+        rdfs:label "Cadre Index"^^xsd:string ;
+        sio:hasValue    "1"^^xsd:integer 
+            ];
+            sio:hasAttribute [
+           rdf:type    stato:0000088 ;
+        rdfs:label "Number of Positive Observations"^^xsd:string ;
+        sio:hasValue    "5518"^^xsd:integer
+            ];
+            ];
+            
+
+        
+        
+        
+        
+   sio:hasPart [
+        rdf:type    hao:BaseRate ;
+        rdfs:label "Base Rate"^^xsd:string ;
+        sio:hasAttribute [
+           rdf:type    hao:CovariateMean ;
+            rdfs:label "Covariate Mean for Base Rate"^^xsd:string ;
+            ];
+            
+         sio:hasAttribute [
+          rdf:type    hao:CovariateStdError ;
+        rdfs:label "Covariate Standard Deviation Error for Base Rate"^^xsd:string ;
+            ];
+        
+        ];  
+
