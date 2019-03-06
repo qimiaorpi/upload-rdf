@@ -1,0 +1,122 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix hao: <http://idea.tw.rpi.edu/projects/heals/hao/> .
+@prefix sco: <http://idea.tw.rpi.edu/projects/heals/sco/> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix stato: <http://purl.obolibrary.org/obo/STATO_> .
+@prefix obcs: <http://purl.obolibrary.org/obo/OBCS_> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix chear: <http://hadatac.org/ont/chear#> .
+@prefix : <http://idea.tw.rpi.edu/projects/heals/hao/kb/> .
+
+:model-lbxbpb-lbxtc-cartridge rdf:type hao:ModelCartridge;
+      sio:hasPart [rdf:type hao:Note ;
+        rdfs:label "Note"^^xsd:string ;
+        sio:hasValue "The numbers here are just placeholders"^^xsd:string];
+
+       sio:hasPart [rdf:type  hao:RiskFactorCartridge;
+        rdfs:label "Risk Factor Cartridge Json File"^^xsd:string ;
+        sio:hasValue "riskfactors-clm.json"^^xsd:string];
+        
+        sio:hasPart [rdf:type  hao:ResponseCartridge ;
+        rdfs:label "Response Cartridge Json File"^^xsd:string ;
+        sio:hasValue "response-totalcholesterol.json"^^xsd:string ];
+        
+        sio:hasPart [
+        rdf:type    hao:CohortCartridge ;
+        rdfs:label "Cohort Cartridge Json File"^^xsd:string ;
+        sio:hasValue "cohort-population.json"^^xsd:string ];
+
+
+       sio:hasPart [rdf:type    hao:Paramethvlartridge ;
+        rdfs:label "Parameter Cartridge Json File"^^xsd:string ;
+        sio:hasValue "parameters-cadre.json"^^xsd:string ];
+
+
+      sio:hasPart [
+        rdf:type    hao:ModelCartridge ;
+        rdfs:label "Model Cartridge Json File"^^xsd:string ;
+        sio:hasValue "model-lbxbpb-lbxtc.json"^^xsd:string ];
+
+
+    sio:hasPart [
+        rdf:type    hao:ResultCartridge ;
+        rdfs:label "Result Cartridge Json File"^^xsd:string ;
+        sio:hasValue "results-subpopulation-lbxbpb.json"^^xsd:string ];
+
+
+    sio:hasPart [
+        rdf:type    hao:SubpopulationCartridge ;
+        rdfs:label "Subpopulation Cartridge Json File"^^xsd:string ;
+        sio:hasValue "subpopulation-lbxbpb.json"^^xsd:string ];
+
+
+   sio:hasPart [
+        rdf:type    hao:IncludedRiskFactor ;
+        rdfs:label "Included Risk Factor"^^xsd:string ;
+        sio:hasValue "LBXBPB"^^xsd:string ];
+
+
+ sio:hasPart [
+        rdf:type    hao:Source ;
+        rdfs:label "Source"^^xsd:string ;
+        sio:hasValue "lbxbpb-lbxtc-cadre-model.pkl"^^xsd:string ];
+
+
+  sio:hasPart [
+        rdf:type    hao:ModelHyperparameter ;
+        rdfs:label "Model Hyperparameter"^^xsd:string ;
+            sio:hasAttribute [
+            rdf:type    hao:resultCount ;
+            rdfs:label "result Count"^^xsd:string ;
+            sio:hasValue "3"^^xsd:integer 
+            ];
+            sio:hasAttribute [
+            rdf:type    hao:RegularizationStrengthD ;
+            rdfs:label "Regularization Strength for Feature Selection Parameter"^^xsd:string ;
+            sio:hasValue "0.01"^^xsd:float 
+            ];
+            sio:hasAttribute [
+            rdf:type    hao:RegularizationStrengthW ;
+            rdfs:label "Regularization Strength for Regression Hyperplane Weights"^^xsd:string ;
+            sio:hasValue "0.001"^^xsd:float 
+            ];
+            sio:hasAttribute [
+             rdf:type    hao:ElasticNetMixingWeightD ;
+            rdfs:label "Elastic-net Mixing Weight for Feature Selection Parameter"^^xsd:string ;
+            sio:hasValue "0.9"^^xsd:float
+            ];
+            sio:hasAttribute [
+            rdf:type    hao:ElasticNetMixingWeightW ;
+            rdfs:label "Elastic-net Mixing Weight for Regression Hyperplane Weights"^^xsd:string ;
+            sio:hasValue "0.9"^^xsd:float
+            ];
+            
+    sio:hasPart [
+        rdf:type    hao:ModelParameter ;
+        rdfs:label "Model Parameter"^^xsd:string ;
+        sio:hasAttribute [
+        rdf:type    hao:FeatureSelectionParameter ;
+        rdfs:label "Feature Selection Parameter d"^^xsd:string
+        ];
+        sio:hasAttribute [
+         rdf:type    hao:resultCenterParameter ;
+        rdfs:label "result Center Parameter C"^^xsd:string 
+        
+        ];
+        sio:hasAttribute [
+        rdf:type    hao:HyperplaneParameter ;
+        rdfs:label "Hyperplane Parameter W"^^xsd:string 
+        
+        ];
+        sio:hasAttribute [
+        rdf:type    hao:HyperplaneParameter ;
+        rdfs:label "Hyperplane Parameter W0"^^xsd:string
+        ];
+];
+].
