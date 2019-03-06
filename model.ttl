@@ -33,7 +33,7 @@
         sio:hasValue "cohort-population.json"^^xsd:string ];
 
 
-       sio:hasPart [rdf:type    hao:Paramethvlartridge ;
+       sio:hasPart [rdf:type    hao:ParameterCartridge ;
         rdfs:label "Parameter Cartridge Json File"^^xsd:string ;
         sio:hasValue "parameters-cadre.json"^^xsd:string ];
 
