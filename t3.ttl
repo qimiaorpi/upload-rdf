@@ -15,9 +15,9 @@
 @prefix : <http://idea.tw.rpi.edu/projects/heals/hao/kb/> .
 
 
-:cohort-healthyweight-cartridge
+:cohort-healthyweight-cartridge rdf:type InputCartridge;
 
-    :use_cohort[
+    rdf:hasPart [:use_cohort[
         rdf:type    hao:UseCohort ;
         rdfs:label    "Use Cohort"^^xsd:string ;
         sio:hasValue    "yes"^^xsd:string] ;
@@ -30,4 +30,4 @@
     :cancer_status[
         rdfs:label    "Cancer Status"^^xsd:string ;
         rdf:type    hao:CancerStatus ;
-        sio:hasValue "no"^^xsd:string ].
+        sio:hasValue "no"^^xsd:string ].].
