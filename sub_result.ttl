@@ -111,8 +111,5 @@
         sio:hasValue    "1.2327"^^xsd:float  
              ];
         ];
-                    
-                    
-        
   ].
         
