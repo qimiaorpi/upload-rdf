@@ -15,20 +15,19 @@
 @prefix : <http://idea.tw.rpi.edu/projects/heals/hao/kb/> .
 
 
-:cohort-healthyweight-cartridge{
+:cohort-healthyweight-cartridge
 
-    :use_cohort
+    :use_cohort[
         rdf:type    hao:UseCohort ;
         rdfs:label    "Use Cohort"^^xsd:string ;
-        sio:hasValue    "yes"^^xsd:string .
+        sio:hasValue    "yes"^^xsd:string] ;
         
-    :bmi_cats
+    :bmi_cats[
         rdf:type    sco:BmiCategory ;
         rdfs:label "BMI Category"^^xsd:string ;
-        sio:hasValue "healthy_weight"^^xsd:string .
+        sio:hasValue "healthy_weight"^^xsd:string ];
     
-    :cancer_status
+    :cancer_status[
         rdfs:label    "Cancer Status"^^xsd:string ;
         rdf:type    hao:CancerStatus ;
-        sio:hasValue "no"^^xsd:string .
-}
+        sio:hasValue "no"^^xsd:string ].
