@@ -1,0 +1,147 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix hao: <http://idea.tw.rpi.edu/projects/heals/hao/> .
+@prefix sco: <http://idea.tw.rpi.edu/projects/heals/sco/> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix stato: <http://purl.obolibrary.org/obo/STATO_> .
+@prefix obcs: <http://purl.obolibrary.org/obo/OBCS_> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix chear: <http://hadatac.org/ont/chear#> .
+@prefix : <http://idea.tw.rpi.edu/projects/heals/hao/kb/> .
+
+:response-totalcholesterol-cartridge rdf:type hao:ResponseCartridge;
+      sio:hasPart [rdf:type    hao:TargetVariable ;
+        rdfs:label "Target Variable"^^xsd:string ;
+        sio:hasValue "total cholesterol"^^xsd:string];
+
+       sio:hasPart [rdf:type    hao:Code ;
+        rdfs:label "Code"^^xsd:string ;
+        sio:hasValue "LBXTC"^^xsd:string];
+        
+      sio:hasPart [rdf:type    hao:DataType;
+        rdfs:label "Data Type"^^xsd:string ;
+        sio:hasValue "continuous"^^xsd:string];
+
+       sio:hasPart [rdf:type    sio:Model ;
+        rdfs:label "Model Type"^^xsd:string ;
+        sio:hasValue "linear_regression"^^xsd:string];
+        
+        sio:hasPart [
+        rdf:type    obcs:0000039 ;
+        rdfs:label "Confounders"^^xsd:string;
+        sio:hasAttribute [
+        rdf:type    stato:0000258  ;
+        rdfs:label "Variables"^^xsd:string;
+         sio:hasAttribute [
+       rdf:type sio:Age];
+                sio:hasAttribute [
+       rdf:type chear:BMI ];
+                sio:hasAttribute [
+       rdf:type sco:PovertyIncomeRatio];
+                sio:hasAttribute [
+       rdf:type sco:SmokeStatus];
+                sio:hasAttribute [
+       rdf:type sco:DrinkStatus];
+                sio:hasAttribute [
+       rdf:type sio:BiologicalSex ];
+                sio:hasAttribute [
+       rdf:type sco:MaritalStatus];
+                sio:hasAttribute [
+       rdf:type sco:Education];
+];
+       
+        sio:hasAttribute [
+         rdf:type    obcs:0000039 ;
+        rdfs:label "Derived From"^^xsd:string ;
+        prov:wasDerivedFrom <https://doi.org/10.1007/s11356-018-1845-1>
+        
+        ];
+      ];
+      
+       sio:hasPart [rdf:type    hao:AnalysisQuestion;
+        rdfs:label "Analysis Question"^^xsd:string ;
+        sio:hasValue "Are higher exposure amounts of a risk factor significantly associated with higher total cholesterol?"^^xsd:string];
+        
+      
+        
+        
+       sio:hasPart [rdf:type    hao:Workflow ;
+        rdfs:label "Workflow Class"^^xsd:string ;
+        sio:hasValue "EWAS"^^xsd:string];
+
+       sio:hasPart [rdf:type    hao:Threshold ;
+        rdfs:label "Significance Threshold"^^xsd:string ;
+        sio:hasValue "0.02"^^xsd:float];
+        
+        
+        sio:hasPart [
+        rdf:type    hao:Hyperparameter ;
+        rdfs:label "Hyperparameter"^^xsd:string ;
+            sio:hasAttribute [
+            rdf:type    hao:CadreCount ;
+        rdfs:label "Cadre Count"^^xsd:string
+            ];
+            sio:hasAttribute [
+            rdf:type    hao:RegularizationStrengthD ;
+        rdfs:label "Regularization Strength for Feature Selection Parameter"^^xsd:string 
+            ];
+            sio:hasAttribute [
+            rdf:type    hao:RegularizationStrengthW ;
+        rdfs:label "Regularization Strength for Regression Hyperplane Weights"^^xsd:string
+            ];
+            sio:hasAttribute [
+             rdf:type    hao:ElasticNetMixingWeightD ;
+        rdfs:label "Elastic-net Mixing Weight for Feature Selection Parameter"^^xsd:string
+            ];
+            sio:hasAttribute [
+            rdf:type    hao:ElasticNetMixingWeightW ;
+        rdfs:label "Elastic-net Mixing Weight for Regression Hyperplane Weights"^^xsd:string
+            ];
+            
+            sio:hasAttribute [
+            rdf:type    hao:Sharpness   ;
+        rdfs:label " Cadre-assignment Sharpness "^^xsd:string 
+            ];
+            sio:hasAttribute [
+            rdf:type    hao:MaxIterationSGD ;
+        rdfs:label "maximum number of SGD iterations "^^xsd:string 
+            ];
+       ];
+       
+       
+       
+             sio:hasPart [rdf:type    hao:FeatureUsage ;
+        rdfs:label "Feature Usage"^^xsd:string ;
+         sio:hasAttribute [
+            rdf:type    hao:CardreAssignment ;
+        rdfs:label "Cardre Assignment"^^xsd:string ;
+        sio:hasValue "control_features"^^xsd:string
+            ];
+            sio:hasAttribute [
+            rdf:type    hao:TargetPrediction ;
+        rdfs:label "Target Prediction"^^xsd:string 
+            ];
+            
+            ];
+
+       sio:hasPart [rdf:type    hao:Metric ;
+        rdfs:label "Selection Metric"^^xsd:string ;
+        sio:hasValue "BIC"^^xsd:string];
+ 
+
+       sio:hasPart [rdf:type    hao:GenerateCohortSummaryTable ;
+        rdfs:label "Generate Cohort Summary Table"^^xsd:string ;
+        sio:hasValue "yes"^^xsd:string];
+        
+               
+      sio:hasPart [rdf:type    hao:UseSurveyWeight ;
+        rdfs:label "Use Survey Weight"^^xsd:string ;
+        sio:hasValue "yes"^^xsd:string ]   .
+        
+       
+     
