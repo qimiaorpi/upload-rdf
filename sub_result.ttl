@@ -15,10 +15,6 @@
 @prefix : <http://idea.tw.rpi.edu/projects/heals/hao/kb/> .
 
 :results-subpopulation-lbxbpb-cartridge rdf:type hao:ResultCartridge;
-      sio:hasPart [rdf:type hao:Note ;
-        rdfs:label "Note"^^xsd:string ;
-        sio:hasValue "The numbers here are just placeholders"^^xsd:string];
-
        sio:hasPart [rdf:type  hao:RiskFactorCartridge;
         rdfs:label "Risk Factor Cartridge Json File"^^xsd:string ;
         sio:hasValue "riskfactors-clm.json"^^xsd:string];
@@ -84,9 +80,9 @@
         sio:hasValue    "0.0002"^^xsd:float
              ];
              sio:hasAttribute [
-                     rdf:type    obi:0001265 ;
-        rdfs:label "BH P Value"^^xsd:string ;
-        sio:hasValue    "0.0007"^^xsd:float 
+                     rdf:type    hao:Estimate ;
+        rdfs:label "Estimate"^^xsd:string ;
+        sio:hasValue    "2.0624"^^xsd:float  
              ];
         ];
   ].
