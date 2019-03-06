@@ -1,0 +1,115 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix hao: <http://idea.tw.rpi.edu/projects/heals/hao/> .
+@prefix sco: <http://idea.tw.rpi.edu/projects/heals/sco/> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix stato: <http://purl.obolibrary.org/obo/STATO_> .
+@prefix obcs: <http://purl.obolibrary.org/obo/OBCS_> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix chear: <http://hadatac.org/ont/chear#> .
+@prefix : <http://idea.tw.rpi.edu/projects/heals/hao/kb/> .
+
+:results-subpopulation-lbxbpb-cartridge rdf:type hao:ResultCartridge;
+       sio:hasPart [rdf:type  hao:RiskFactorCartridge;
+        rdfs:label "Risk Factor Cartridge Json File"^^xsd:string ;
+        sio:hasValue "riskfactors-clm.json"^^xsd:string];
+        
+        sio:hasPart [rdf:type  hao:ResponseCartridge ;
+        rdfs:label "Response Cartridge Json File"^^xsd:string ;
+        sio:hasValue "response-totalcholesterol.json"^^xsd:string ];
+        
+        sio:hasPart [
+        rdf:type    hao:CohortCartridge ;
+        rdfs:label "Cohort Cartridge Json File"^^xsd:string ;
+        sio:hasValue "cohort-population.json"^^xsd:string ];
+
+
+       sio:hasPart [rdf:type    hao:ParameterCartridge ;
+        rdfs:label "Parameter Cartridge Json File"^^xsd:string ;
+        sio:hasValue "parameters-cadre.json"^^xsd:string ];
+
+
+      sio:hasPart [
+        rdf:type    hao:ModelCartridge ;
+        rdfs:label "Model Cartridge Json File"^^xsd:string ;
+        sio:hasValue "model-lbxbpb-lbxtc.json"^^xsd:string ];
+
+
+    sio:hasPart [
+        rdf:type    hao:ResultCartridge ;
+        rdfs:label "Result Cartridge Json File"^^xsd:string ;
+        sio:hasValue "results-subpopulation-lbxbpb.json"^^xsd:string ];
+
+
+    sio:hasPart [
+        rdf:type    hao:SubpopulationCartridge ;
+        rdfs:label "Subpopulation Cartridge Json File"^^xsd:string ;
+        sio:hasValue "subpopulation-lbxbpb.json"^^xsd:string ];
+
+
+   sio:hasPart [
+        rdf:type    hao:IncludedRiskFactor ;
+        rdfs:label "Included Risk Factor"^^xsd:string ;
+        sio:hasValue "LBXBPB"^^xsd:string ];
+
+
+ sio:hasPart [
+ 
+        rdf:type    hao:Association ;
+        rdfs:label "Association"^^xsd:string ;
+        sio:hasPart [
+             rdfs:label "Result 1"^^xsd:string ;
+             sio:hasAttribute [
+                rdf:type    hao:CadreIndex ;
+                rdfs:label "Cadre Index"^^xsd:string ;
+              sio:hasValue    "0"^^xsd:integer
+             ];
+             sio:hasAttribute [
+              rdf:type    stato:0000562 ;
+              rdfs:label "Standard Error"^^xsd:string ;
+              sio:hasValue    "0.788"^^xsd:float
+             ];
+              sio:hasAttribute [
+                  rdf:type    obi:0000175 ;
+        rdfs:label "P Value"^^xsd:string ;
+        sio:hasValue    "0.0003"^^xsd:float
+             ];
+             sio:hasAttribute [
+                     rdf:type    hao:Estimate ;
+        rdfs:label "Estimate"^^xsd:string ;
+        sio:hasValue    "3.0665"^^xsd:float  
+             ];
+        ];
+        
+                    
+                    
+        sio:hasPart [
+             rdfs:label "Result 2"^^xsd:string ;
+             sio:hasAttribute [
+                rdf:type    hao:CadreIndex ;
+                rdfs:label "Cadre Index"^^xsd:string ;
+              sio:hasValue    "2"^^xsd:integer
+             ];
+             sio:hasAttribute [
+              rdf:type    stato:0000562 ;
+              rdfs:label "Standard Error"^^xsd:string ;
+              sio:hasValue    "0.8392"^^xsd:float
+             ];
+              sio:hasAttribute [
+                  rdf:type    obi:0000175 ;
+        rdfs:label "P Value"^^xsd:string ;
+        sio:hasValue    "0.1484"^^xsd:float
+             ];
+             sio:hasAttribute [
+                     rdf:type    hao:Estimate ;
+        rdfs:label "Estimate"^^xsd:string ;
+        sio:hasValue    "1.2327"^^xsd:float  
+             ];
+        ];
+  ].
+        
