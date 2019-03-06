@@ -72,18 +72,47 @@
              sio:hasAttribute [
               rdf:type    stato:0000562 ;
               rdfs:label "Standard Error"^^xsd:string ;
-              sio:hasValue    "0.5177"^^xsd:float
+              sio:hasValue    "0.788"^^xsd:float
              ];
               sio:hasAttribute [
                   rdf:type    obi:0000175 ;
         rdfs:label "P Value"^^xsd:string ;
-        sio:hasValue    "0.0002"^^xsd:float
+        sio:hasValue    "0.0003"^^xsd:float
              ];
              sio:hasAttribute [
                      rdf:type    hao:Estimate ;
         rdfs:label "Estimate"^^xsd:string ;
-        sio:hasValue    "2.0624"^^xsd:float  
+        sio:hasValue    "3.0665"^^xsd:float  
              ];
         ];
+        
+                    
+                    
+        sio:hasPart [
+             rdfs:label "Result 2"^^xsd:string ;
+             sio:hasAttribute [
+                rdf:type    hao:CadreIndex ;
+                rdfs:label "Cadre Index"^^xsd:string ;
+              sio:hasValue    "2"^^xsd:integer
+             ];
+             sio:hasAttribute [
+              rdf:type    stato:0000562 ;
+              rdfs:label "Standard Error"^^xsd:string ;
+              sio:hasValue    "0.8392"^^xsd:float
+             ];
+              sio:hasAttribute [
+                  rdf:type    obi:0000175 ;
+        rdfs:label "P Value"^^xsd:string ;
+        sio:hasValue    "0.1484"^^xsd:float
+             ];
+             sio:hasAttribute [
+                     rdf:type    hao:Estimate ;
+        rdfs:label "Estimate"^^xsd:string ;
+        sio:hasValue    "1.2327"^^xsd:float  
+             ];
+        ];
+                    
+                    
+        
   ].
         
